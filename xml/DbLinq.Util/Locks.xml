@@ -35,9 +35,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Gets a static instance of <see cref="System.Threading.ReaderWriterLockSlim" /> that can be used to synchronize access to a shared resource.</summary>
+        <returns>A static instance of <see cref="System.Threading.ReaderWriterLockSlim" /> class.</returns>
       </Docs>
     </Member>
     <Member MemberName="GetLockInstance">
@@ -59,10 +58,9 @@
         <Parameter Name="recursionPolicy" Type="System.Threading.LockRecursionPolicy" />
       </Parameters>
       <Docs>
-        <param name="recursionPolicy">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Returns a new instance of the ReaderWriterLockSlim class.</summary>
+        <param name="recursionPolicy">One of the enumeration values that specifies whether the lock can be entered recursively.</param>
+        <returns>A new instance of the ReaderWriterLockSlim class.</returns>
       </Docs>
     </Member>
     <Member MemberName="GetReadLock">
@@ -84,9 +82,8 @@
         <Parameter Name="locks" Type="System.Threading.ReaderWriterLockSlim" />
       </Parameters>
       <Docs>
-        <param name="locks">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Acquires a read lock on the specified <c>System.Threading.ReaderWriterLockSlim</c> object.</summary>
+        <param name="locks">The <c>System.Threading.ReaderWriterLockSlim</c> object to acquire the read lock on.</param>
       </Docs>
     </Member>
     <Member MemberName="GetReadOnlyLock">
@@ -108,9 +105,8 @@
         <Parameter Name="locks" Type="System.Threading.ReaderWriterLockSlim" />
       </Parameters>
       <Docs>
-        <param name="locks">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Acquires a read-only lock on the specified <paramref name="locks" /> object.</summary>
+        <param name="locks">The <see cref="T:System.Threading.ReaderWriterLockSlim" /> object to acquire a lock on.</param>
       </Docs>
     </Member>
     <Member MemberName="GetWriteLock">
@@ -132,9 +128,8 @@
         <Parameter Name="locks" Type="System.Threading.ReaderWriterLockSlim" />
       </Parameters>
       <Docs>
-        <param name="locks">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Acquires the write lock of a ReaderWriterLockSlim object.</summary>
+        <param name="locks">The ReaderWriterLockSlim object that holds the lock.</param>
       </Docs>
     </Member>
     <Member MemberName="ReleaseLock">
@@ -156,9 +151,8 @@
         <Parameter Name="locks" Type="System.Threading.ReaderWriterLockSlim" />
       </Parameters>
       <Docs>
-        <param name="locks">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Releases all locks and resources held by the specified <paramref name="locks" /> instance.</summary>
+        <param name="locks">A <see cref="System.Threading.ReaderWriterLockSlim" /> object whose locks and resources to release.</param>
       </Docs>
     </Member>
     <Member MemberName="ReleaseReadLock">
@@ -180,9 +174,9 @@
         <Parameter Name="locks" Type="System.Threading.ReaderWriterLockSlim" />
       </Parameters>
       <Docs>
-        <param name="locks">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Releases a read lock.</summary>
+        <param name="locks">The target <see cref="System.Threading.ReaderWriterLockSlim" /> object.</param>
+        <remarks>This method releases a read lock on the specified <see cref="System.Threading.ReaderWriterLockSlim" /> object.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ReleaseReadOnlyLock">
@@ -204,9 +198,8 @@
         <Parameter Name="locks" Type="System.Threading.ReaderWriterLockSlim" />
       </Parameters>
       <Docs>
-        <param name="locks">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Releases a read lock on a ReaderWriterLockSlim object.</summary>
+        <param name="locks">The ReaderWriterLockSlim object to release the read lock from.</param>
       </Docs>
     </Member>
     <Member MemberName="ReleaseWriteLock">
@@ -228,9 +221,8 @@
         <Parameter Name="locks" Type="System.Threading.ReaderWriterLockSlim" />
       </Parameters>
       <Docs>
-        <param name="locks">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Releases a write lock.</summary>
+        <param name="locks">The <see cref="System.Threading.ReaderWriterLockSlim" /> containing the write lock to release.</param>
       </Docs>
     </Member>
   </Members>

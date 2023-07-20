@@ -34,9 +34,9 @@
         <Parameter Name="locks" Type="System.Threading.ReaderWriterLockSlim" />
       </Parameters>
       <Docs>
-        <param name="locks">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Initializes a new instance of the <see cref="ReadLock" /> class with the specified <see cref="System.Threading.ReaderWriterLockSlim" /> object.</summary>
+        <param name="locks">The <see cref="System.Threading.ReaderWriterLockSlim" /> object to create the lock on.</param>
+        <remarks>Creates a new read lock on the <paramref name="locks" /> object.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Dispose">

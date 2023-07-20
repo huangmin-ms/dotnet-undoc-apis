@@ -38,9 +38,8 @@
         <Parameter Name="locks" Type="System.Threading.ReaderWriterLockSlim" />
       </Parameters>
       <Docs>
-        <param name="locks">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Initializes a new instance of the <see cref="BaseLock" /> class using the specified reader-writer lock.</summary>
+        <param name="locks">The <see cref="System.Threading.ReaderWriterLockSlim" /> object.</param>
       </Docs>
     </Member>
     <Member MemberName="_Locks">
@@ -59,8 +58,9 @@
         <ReturnType>System.Threading.ReaderWriterLockSlim</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>A thread-safe data structure that uses a reader-writer locking strategy for thread synchronization.</summary>
+        <remarks>This locking strategy allows multiple threads to read a resource simultaneously, but requires that any thread wishing to write to the resource must wait until all existing readers have released their locks.</remarks>
+        <value>The thread-safe data structure that uses a reader-writer locking strategy for thread synchronization.</value>
       </Docs>
     </Member>
     <Member MemberName="Dispose">
@@ -83,8 +83,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
       </Docs>
     </Member>
   </Members>

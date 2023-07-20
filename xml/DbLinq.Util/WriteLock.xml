@@ -34,9 +34,8 @@
         <Parameter Name="locks" Type="System.Threading.ReaderWriterLockSlim" />
       </Parameters>
       <Docs>
-        <param name="locks">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Initializes a new instance of the <see cref="WriteLock" /> class.</summary>
+        <param name="locks">The <see cref="System.Threading.ReaderWriterLockSlim" /> object that is used to synchronize write access to a resource.</param>
       </Docs>
     </Member>
     <Member MemberName="Dispose">
@@ -56,8 +55,11 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
+        <remarks>
+        This method is an implementation of the <see cref="System.IDisposable.Dispose" /> method. It is provided to perform class-specific cleanup actions that cannot be performed by the IDisposable.Dispose method.
+    </remarks>
+        <seealso cref="System.IDisposable.Dispose()" />
       </Docs>
     </Member>
   </Members>

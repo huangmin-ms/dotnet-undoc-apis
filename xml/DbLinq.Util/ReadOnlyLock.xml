@@ -34,9 +34,8 @@
         <Parameter Name="locks" Type="System.Threading.ReaderWriterLockSlim" />
       </Parameters>
       <Docs>
-        <param name="locks">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Initializes a new instance of the ReadOnlyLock class.</summary>
+        <param name="locks">The ReaderWriterLockSlim object to create a read-only lock for.</param>
       </Docs>
     </Member>
     <Member MemberName="Dispose">
@@ -56,8 +55,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Disposes the current object.</summary>
+        <remarks>This method performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</remarks>
+        <seealso cref="IDisposable.Dispose()" />
       </Docs>
     </Member>
   </Members>
