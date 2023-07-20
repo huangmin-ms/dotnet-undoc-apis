@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Framework Name="xamarinmac-3.0">
+  <Assemblies>
+    <Assembly Name="System.Data.Linq" Version="4.0.0.0" />
+  </Assemblies>
+  <Namespace Name="DbLinq.Util">
+    <Type Name="DbLinq.Util.BaseLock" Id="T:DbLinq.Util.BaseLock">
+      <Member Id="F:DbLinq.Util.BaseLock._Locks" />
+      <Member Id="M:DbLinq.Util.BaseLock.#ctor(System.Threading.ReaderWriterLockSlim)" />
+      <Member Id="M:DbLinq.Util.BaseLock.Dispose" />
+    </Type>
+    <Type Name="DbLinq.Util.Locks" Id="T:DbLinq.Util.Locks">
+      <Member Id="M:DbLinq.Util.Locks.GetLockInstance" />
+      <Member Id="M:DbLinq.Util.Locks.GetLockInstance(System.Threading.LockRecursionPolicy)" />
+      <Member Id="M:DbLinq.Util.Locks.GetReadLock(System.Threading.ReaderWriterLockSlim)" />
+      <Member Id="M:DbLinq.Util.Locks.GetReadOnlyLock(System.Threading.ReaderWriterLockSlim)" />
+      <Member Id="M:DbLinq.Util.Locks.GetWriteLock(System.Threading.ReaderWriterLockSlim)" />
+      <Member Id="M:DbLinq.Util.Locks.ReleaseLock(System.Threading.ReaderWriterLockSlim)" />
+      <Member Id="M:DbLinq.Util.Locks.ReleaseReadLock(System.Threading.ReaderWriterLockSlim)" />
+      <Member Id="M:DbLinq.Util.Locks.ReleaseReadOnlyLock(System.Threading.ReaderWriterLockSlim)" />
+      <Member Id="M:DbLinq.Util.Locks.ReleaseWriteLock(System.Threading.ReaderWriterLockSlim)" />
+    </Type>
+    <Type Name="DbLinq.Util.ReadLock" Id="T:DbLinq.Util.ReadLock">
+      <Member Id="M:DbLinq.Util.ReadLock.#ctor(System.Threading.ReaderWriterLockSlim)" />
+      <Member Id="M:DbLinq.Util.ReadLock.Dispose" />
+    </Type>
+    <Type Name="DbLinq.Util.ReadOnlyLock" Id="T:DbLinq.Util.ReadOnlyLock">
+      <Member Id="M:DbLinq.Util.ReadOnlyLock.#ctor(System.Threading.ReaderWriterLockSlim)" />
+      <Member Id="M:DbLinq.Util.ReadOnlyLock.Dispose" />
+    </Type>
+    <Type Name="DbLinq.Util.WriteLock" Id="T:DbLinq.Util.WriteLock">
+      <Member Id="M:DbLinq.Util.WriteLock.#ctor(System.Threading.ReaderWriterLockSlim)" />
+      <Member Id="M:DbLinq.Util.WriteLock.Dispose" />
+    </Type>
+  </Namespace>
+  <Namespace Name="System.Data.Linq">
+    <Type Name="System.Data.Linq.Binary" Id="T:System.Data.Linq.Binary">
+      <Member Id="M:System.Data.Linq.Binary.#ctor(System.Byte[])" />
+      <Member Id="M:System.Data.Linq.Binary.Equals(System.Data.Linq.Binary)" />
+      <Member Id="M:System.Data.Linq.Binary.Equals(System.Object)" />
+      <Member Id="M:System.Data.Linq.Binary.GetHashCode" />
+      <Member Id="M:System.Data.Linq.Binary.op_Equality(System.Data.Linq.Binary,System.Data.Linq.Binary)" />
+      <Member Id="M:System.Data.Linq.Binary.op_Implicit(System.Byte[])~System.Data.Linq.Binary" />
+      <Member Id="M:System.Data.Linq.Binary.op_Inequality(System.Data.Linq.Binary,System.Data.Linq.Binary)" />
+      <Member Id="M:System.Data.Linq.Binary.ToArray" />
+      <Member Id="M:System.Data.Linq.Binary.ToString" />
+      <Member Id="P:System.Data.Linq.Binary.Length" />
+    </Type>
+    <Type Name="System.Data.Linq.ChangeAction" Id="T:System.Data.Linq.ChangeAction">
+      <Member Id="F:System.Data.Linq.ChangeAction.Delete" />
+      <Member Id="F:System.Data.Linq.ChangeAction.Insert" />
+      <Member Id="F:System.Data.Linq.ChangeAction.None" />
+      <Member Id="F:System.Data.Linq.ChangeAction.Update" />
+    </Type>
+    <Type Name="System.Data.Linq.ChangeConflictCollection" Id="T:System.Data.Linq.ChangeConflictCollection">
+      <Member Id="M:System.Data.Linq.ChangeConflictCollection.Clear" />
+      <Member Id="M:System.Data.Linq.ChangeConflictCollection.Contains(System.Data.Linq.ObjectChangeConflict)" />
+      <Member Id="M:System.Data.Linq.ChangeConflictCollection.CopyTo(System.Data.Linq.ObjectChangeConflict[],System.Int32)" />
+      <Member Id="M:System.Data.Linq.ChangeConflictCollection.GetEnumerator" />
+      <Member Id="M:System.Data.Linq.ChangeConflictCollection.Remove(System.Data.Linq.ObjectChangeConflict)" />
+      <Member Id="M:System.Data.Linq.ChangeConflictCollection.ResolveAll(System.Data.Linq.RefreshMode)" />
+      <Member Id="M:System.Data.Linq.ChangeConflictCollection.ResolveAll(System.Data.Linq.RefreshMode,System.Boolean)" />
+      <Member Id="M:System.Data.Linq.ChangeConflictCollection.System#Collections#Generic#ICollection&lt;System#Data#Linq#ObjectChangeConflict&gt;#Add(System.Data.Linq.ObjectChangeConflict)" />
+      <Member Id="M:System.Data.Linq.ChangeConflictCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <Member Id="M:System.Data.Linq.ChangeConflictCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <Member Id="P:System.Data.Linq.ChangeConflictCollection.Count" />
+      <Member Id="P:System.Data.Linq.ChangeConflictCollection.Item(System.Int32)" />
+      <Member Id="P:System.Data.Linq.ChangeConflictCollection.System#Collections#Generic#ICollection&lt;System#Data#Linq#ObjectChangeConflict&gt;#IsReadOnly" />
+      <Member Id="P:System.Data.Linq.ChangeConflictCollection.System#Collections#ICollection#IsSynchronized" />
+      <Member Id="P:System.Data.Linq.ChangeConflictCollection.System#Collections#ICollection#SyncRoot" />
+    </Type>
+    <Type Name="System.Data.Linq.ChangeConflictException" Id="T:System.Data.Linq.ChangeConflictException">
+      <Member Id="M:System.Data.Linq.ChangeConflictException.#ctor" />
+      <Member Id="M:System.Data.Linq.ChangeConflictException.#ctor(System.String)" />
+      <Member Id="M:System.Data.Linq.ChangeConflictException.#ctor(System.String,System.Exception)" />
+    </Type>
+    <Type Name="System.Data.Linq.ChangeSet" Id="T:System.Data.Linq.ChangeSet">
+      <Member Id="M:System.Data.Linq.ChangeSet.ToString" />
+      <Member Id="P:System.Data.Linq.ChangeSet.Deletes" />
+      <Member Id="P:System.Data.Linq.ChangeSet.Inserts" />
+      <Member Id="P:System.Data.Linq.ChangeSet.Updates" />
+    </Type>
+    <Type Name="System.Data.Linq.CompiledQuery" Id="T:System.Data.Linq.CompiledQuery">
+      <Member Id="M:System.Data.Linq.CompiledQuery.Compile``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})" />
+      <Member Id="M:System.Data.Linq.CompiledQuery.Compile``3(System.Linq.Expressions.Expression{System.Func{``0,``1,``2}})" />
+      <Member Id="M:System.Data.Linq.CompiledQuery.Compile``4(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3}})" />
+      <Member Id="M:System.Data.Linq.CompiledQuery.Compile``5(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4}})" />
+      <Member Id="P:System.Data.Linq.CompiledQuery.Expression" />
+    </Type>
+    <Type Name="System.Data.Linq.ConflictMode" Id="T:System.Data.Linq.ConflictMode">
+      <Member Id="F:System.Data.Linq.ConflictMode.ContinueOnConflict" />
+      <Member Id="F:System.Data.Linq.ConflictMode.FailOnFirstConflict" />
+    </Type>
+    <Type Name="System.Data.Linq.DataContext" Id="T:System.Data.Linq.DataContext">
+      <Member Id="M:System.Data.Linq.DataContext.#ctor(System.Data.IDbConnection)" />
+      <Member Id="M:System.Data.Linq.DataContext.#ctor(System.Data.IDbConnection,System.Data.Linq.Mapping.MappingSource)" />
+      <Member Id="M:System.Data.Linq.DataContext.#ctor(System.String)" />
+      <Member Id="M:System.Data.Linq.DataContext.#ctor(System.String,System.Data.Linq.Mapping.MappingSource)" />
+      <Member Id="M:System.Data.Linq.DataContext.CreateDatabase" />
+      <Member Id="M:System.Data.Linq.DataContext.CreateMethodCallQuery``1(System.Object,System.Reflection.MethodInfo,System.Object[])" />
+      <Member Id="M:System.Data.Linq.DataContext.DatabaseExists" />
+      <Member Id="M:System.Data.Linq.DataContext.DeleteDatabase" />
+      <Member Id="M:System.Data.Linq.DataContext.Dispose" />
+      <Member Id="M:System.Data.Linq.DataContext.Dispose(System.Boolean)" />
+      <Member Id="M:System.Data.Linq.DataContext.ExecuteCommand(System.String,System.Object[])" />
+      <Member Id="M:System.Data.Linq.DataContext.ExecuteDynamicDelete(System.Object)" />
+      <Member Id="M:System.Data.Linq.DataContext.ExecuteDynamicInsert(System.Object)" />
+      <Member Id="M:System.Data.Linq.DataContext.ExecuteDynamicUpdate(System.Object)" />
+      <Member Id="M:System.Data.Linq.DataContext.ExecuteMethodCall(System.Object,System.Reflection.MethodInfo,System.Object[])" />
+      <Member Id="M:System.Data.Linq.DataContext.ExecuteQuery(System.Type,System.String,System.Object[])" />
+      <Member Id="M:System.Data.Linq.DataContext.ExecuteQuery``1(System.String,System.Object[])" />
+      <Member Id="M:System.Data.Linq.DataContext.GetChangeSet" />
+      <Member Id="M:System.Data.Linq.DataContext.GetCommand(System.Linq.IQueryable)" />
+      <Member Id="M:System.Data.Linq.DataContext.GetIDbCommand(System.Linq.IQueryable)" />
+      <Member Id="M:System.Data.Linq.DataContext.GetTable(System.Type)" />
+      <Member Id="M:System.Data.Linq.DataContext.GetTable``1" />
+      <Member Id="M:System.Data.Linq.DataContext.Refresh(System.Data.Linq.RefreshMode,System.Collections.IEnumerable)" />
+      <Member Id="M:System.Data.Linq.DataContext.Refresh(System.Data.Linq.RefreshMode,System.Object)" />
+      <Member Id="M:System.Data.Linq.DataContext.Refresh(System.Data.Linq.RefreshMode,System.Object[])" />
+      <Member Id="M:System.Data.Linq.DataContext.SubmitChanges" />
+      <Member Id="M:System.Data.Linq.DataContext.SubmitChanges(System.Data.Linq.ConflictMode)" />
+      <Member Id="M:System.Data.Linq.DataContext.Translate(System.Data.Common.DbDataReader)" />
+      <Member Id="M:System.Data.Linq.DataContext.Translate(System.Type,System.Data.Common.DbDataReader)" />
+      <Member Id="M:System.Data.Linq.DataContext.Translate``1(System.Data.Common.DbDataReader)" />
+      <Member Id="P:System.Data.Linq.DataContext.ChangeConflicts" />
+      <Member Id="P:System.Data.Linq.DataContext.CommandTimeout" />
+      <Member Id="P:System.Data.Linq.DataContext.Connection" />
+      <Member Id="P:System.Data.Linq.DataContext.DeferredLoadingEnabled" />
+      <Member Id="P:System.Data.Linq.DataContext.LoadOptions" />
+      <Member Id="P:System.Data.Linq.DataContext.Log" />
+      <Member Id="P:System.Data.Linq.DataContext.Mapping" />
+      <Member Id="P:System.Data.Linq.DataContext.ObjectTrackingEnabled" />
+      <Member Id="P:System.Data.Linq.DataContext.QueryCacheEnabled" />
+      <Member Id="P:System.Data.Linq.DataContext.Transaction" />
+    </Type>
+    <Type Name="System.Data.Linq.DataLoadOptions" Id="T:System.Data.Linq.DataLoadOptions">
+      <Member Id="M:System.Data.Linq.DataLoadOptions.#ctor" />
+      <Member Id="M:System.Data.Linq.DataLoadOptions.AssociateWith(System.Linq.Expressions.LambdaExpression)" />
+      <Member Id="M:System.Data.Linq.DataLoadOptions.AssociateWith``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})" />
+      <Member Id="M:System.Data.Linq.DataLoadOptions.GetAssociationCriteria(System.Reflection.MemberInfo,System.Linq.Expressions.LambdaExpression@)" />
+      <Member Id="M:System.Data.Linq.DataLoadOptions.IsImmediate(System.Reflection.MemberInfo)" />
+      <Member Id="M:System.Data.Linq.DataLoadOptions.LoadWith(System.Linq.Expressions.LambdaExpression)" />
+      <Member Id="M:System.Data.Linq.DataLoadOptions.LoadWith``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})" />
+    </Type>
+    <Type Name="System.Data.Linq.DBConvert" Id="T:System.Data.Linq.DBConvert">
+      <Member Id="M:System.Data.Linq.DBConvert.ChangeType(System.Object,System.Type)" />
+      <Member Id="M:System.Data.Linq.DBConvert.ChangeType``1(System.Object)" />
+    </Type>
+    <Type Name="System.Data.Linq.DuplicateKeyException" Id="T:System.Data.Linq.DuplicateKeyException">
+      <Member Id="M:System.Data.Linq.DuplicateKeyException.#ctor(System.Object)" />
+      <Member Id="M:System.Data.Linq.DuplicateKeyException.#ctor(System.Object,System.String)" />
+      <Member Id="M:System.Data.Linq.DuplicateKeyException.#ctor(System.Object,System.String,System.Exception)" />
+      <Member Id="P:System.Data.Linq.DuplicateKeyException.Object" />
+    </Type>
+    <Type Name="System.Data.Linq.EntityRef`1" Id="T:System.Data.Linq.EntityRef`1">
+      <Member Id="M:System.Data.Linq.EntityRef`1.#ctor(`0)" />
+      <Member Id="M:System.Data.Linq.EntityRef`1.#ctor(System.Collections.Generic.IEnumerable{`0})" />
+      <Member Id="M:System.Data.Linq.EntityRef`1.#ctor(System.Data.Linq.EntityRef{`0})" />
+      <Member Id="P:System.Data.Linq.EntityRef`1.Entity" />
+      <Member Id="P:System.Data.Linq.EntityRef`1.HasLoadedOrAssignedValue" />
+    </Type>
+    <Type Name="System.Data.Linq.EntitySet`1" Id="T:System.Data.Linq.EntitySet`1">
+      <Member Id="E:System.Data.Linq.EntitySet`1.ListChanged" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.#ctor" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.#ctor(System.Action{`0},System.Action{`0})" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.Add(`0)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.AddRange(System.Collections.Generic.IEnumerable{`0})" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.Assign(System.Collections.Generic.IEnumerable{`0})" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.Clear" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.Contains(`0)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.CopyTo(`0[],System.Int32)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.GetEnumerator" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.GetNewBindingList" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.IndexOf(`0)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.Insert(System.Int32,`0)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.Load" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.Remove(`0)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.RemoveAt(System.Int32)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.SetSource(System.Collections.Generic.IEnumerable{`0})" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.System#Collections#IEnumerable#GetEnumerator" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.System#Collections#IList#Add(System.Object)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.System#Collections#IList#Clear" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.System#Collections#IList#Contains(System.Object)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.System#Collections#IList#IndexOf(System.Object)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.System#Collections#IList#Remove(System.Object)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.System#Collections#IList#RemoveAt(System.Int32)" />
+      <Member Id="M:System.Data.Linq.EntitySet`1.System#ComponentModel#IListSource#GetList" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.Count" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.HasAssignedValues" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.HasLoadedOrAssignedValues" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.HasLoadedValues" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.IsDeferred" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.Item(System.Int32)" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.System#Collections#Generic#ICollection&lt;TEntity&gt;#IsReadOnly" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.System#Collections#ICollection#Count" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.System#Collections#ICollection#IsSynchronized" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.System#Collections#ICollection#SyncRoot" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.System#Collections#IList#IsFixedSize" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.System#Collections#IList#IsReadOnly" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.System#Collections#IList#Item(System.Int32)" />
+      <Member Id="P:System.Data.Linq.EntitySet`1.System#ComponentModel#IListSource#ContainsListCollection" />
+    </Type>
+    <Type Name="System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException" Id="T:System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException">
+      <Member Id="M:System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException.#ctor" />
+      <Member Id="M:System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException.#ctor(System.String)" />
+      <Member Id="M:System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException.#ctor(System.String,System.Exception)" />
+    </Type>
+    <Type Name="System.Data.Linq.IExecuteResult" Id="T:System.Data.Linq.IExecuteResult">
+      <Member Id="M:System.Data.Linq.IExecuteResult.GetParameterValue(System.Int32)" />
+      <Member Id="P:System.Data.Linq.IExecuteResult.ReturnValue" />
+    </Type>
+    <Type Name="System.Data.Linq.IFunctionResult" Id="T:System.Data.Linq.IFunctionResult">
+      <Member Id="P:System.Data.Linq.IFunctionResult.ReturnValue" />
+    </Type>
+    <Type Name="System.Data.Linq.IMultipleResults" Id="T:System.Data.Linq.IMultipleResults">
+      <Member Id="M:System.Data.Linq.IMultipleResults.GetResult``1" />
+    </Type>
+    <Type Name="System.Data.Linq.ISingleResult`1" Id="T:System.Data.Linq.ISingleResult`1" />
+    <Type Name="System.Data.Linq.ITable" Id="T:System.Data.Linq.ITable">
+      <Member Id="M:System.Data.Linq.ITable.Attach(System.Object)" />
+      <Member Id="M:System.Data.Linq.ITable.Attach(System.Object,System.Boolean)" />
+      <Member Id="M:System.Data.Linq.ITable.Attach(System.Object,System.Object)" />
+      <Member Id="M:System.Data.Linq.ITable.AttachAll(System.Collections.IEnumerable)" />
+      <Member Id="M:System.Data.Linq.ITable.AttachAll(System.Collections.IEnumerable,System.Boolean)" />
+      <Member Id="M:System.Data.Linq.ITable.DeleteAllOnSubmit(System.Collections.IEnumerable)" />
+      <Member Id="M:System.Data.Linq.ITable.DeleteOnSubmit(System.Object)" />
+      <Member Id="M:System.Data.Linq.ITable.GetModifiedMembers(System.Object)" />
+      <Member Id="M:System.Data.Linq.ITable.GetOriginalEntityState(System.Object)" />
+      <Member Id="M:System.Data.Linq.ITable.InsertAllOnSubmit(System.Collections.IEnumerable)" />
+      <Member Id="M:System.Data.Linq.ITable.InsertOnSubmit(System.Object)" />
+      <Member Id="P:System.Data.Linq.ITable.Context" />
+      <Member Id="P:System.Data.Linq.ITable.IsReadOnly" />
+    </Type>
+    <Type Name="System.Data.Linq.Link`1" Id="T:System.Data.Linq.Link`1">
+      <Member Id="M:System.Data.Linq.Link`1.#ctor(`0)" />
+      <Member Id="M:System.Data.Linq.Link`1.#ctor(System.Collections.Generic.IEnumerable{`0})" />
+      <Member Id="M:System.Data.Linq.Link`1.#ctor(System.Data.Linq.Link{`0})" />
+      <Member Id="P:System.Data.Linq.Link`1.HasLoadedOrAssignedValue" />
+      <Member Id="P:System.Data.Linq.Link`1.HasValue" />
+      <Member Id="P:System.Data.Linq.Link`1.Value" />
+    </Type>
+    <Type Name="System.Data.Linq.MemberChangeConflict" Id="T:System.Data.Linq.MemberChangeConflict">
+      <Member Id="M:System.Data.Linq.MemberChangeConflict.Resolve(System.Data.Linq.RefreshMode)" />
+      <Member Id="M:System.Data.Linq.MemberChangeConflict.Resolve(System.Object)" />
+      <Member Id="P:System.Data.Linq.MemberChangeConflict.CurrentValue" />
+      <Member Id="P:System.Data.Linq.MemberChangeConflict.DatabaseValue" />
+      <Member Id="P:System.Data.Linq.MemberChangeConflict.IsModified" />
+      <Member Id="P:System.Data.Linq.MemberChangeConflict.IsResolved" />
+      <Member Id="P:System.Data.Linq.MemberChangeConflict.Member" />
+      <Member Id="P:System.Data.Linq.MemberChangeConflict.OriginalValue" />
+    </Type>
+    <Type Name="System.Data.Linq.ModifiedMemberInfo" Id="T:System.Data.Linq.ModifiedMemberInfo">
+      <Member Id="P:System.Data.Linq.ModifiedMemberInfo.CurrentValue" />
+      <Member Id="P:System.Data.Linq.ModifiedMemberInfo.Member" />
+      <Member Id="P:System.Data.Linq.ModifiedMemberInfo.OriginalValue" />
+    </Type>
+    <Type Name="System.Data.Linq.ObjectChangeConflict" Id="T:System.Data.Linq.ObjectChangeConflict">
+      <Member Id="M:System.Data.Linq.ObjectChangeConflict.Resolve" />
+      <Member Id="M:System.Data.Linq.ObjectChangeConflict.Resolve(System.Data.Linq.RefreshMode)" />
+      <Member Id="M:System.Data.Linq.ObjectChangeConflict.Resolve(System.Data.Linq.RefreshMode,System.Boolean)" />
+      <Member Id="P:System.Data.Linq.ObjectChangeConflict.IsDeleted" />
+      <Member Id="P:System.Data.Linq.ObjectChangeConflict.IsResolved" />
+      <Member Id="P:System.Data.Linq.ObjectChangeConflict.MemberConflicts" />
+      <Member Id="P:System.Data.Linq.ObjectChangeConflict.Object" />
+    </Type>
+    <Type Name="System.Data.Linq.RefreshMode" Id="T:System.Data.Linq.RefreshMode">
+      <Member Id="F:System.Data.Linq.RefreshMode.KeepChanges" />
+      <Member Id="F:System.Data.Linq.RefreshMode.KeepCurrentValues" />
+      <Member Id="F:System.Data.Linq.RefreshMode.OverwriteCurrentValues" />
+    </Type>
+    <Type Name="System.Data.Linq.Table`1" Id="T:System.Data.Linq.Table`1">
+      <Member Id="M:System.Data.Linq.Table`1.Attach(`0)" />
+      <Member Id="M:System.Data.Linq.Table`1.Attach(`0,`0)" />
+      <Member Id="M:System.Data.Linq.Table`1.Attach(`0,System.Boolean)" />
+      <Member Id="M:System.Data.Linq.Table`1.AttachAll``1(System.Collections.Generic.IEnumerable{``0})" />
+      <Member Id="M:System.Data.Linq.Table`1.AttachAll``1(System.Collections.Generic.IEnumerable{``0},System.Boolean)" />
+      <Member Id="M:System.Data.Linq.Table`1.DeleteAllOnSubmit``1(System.Collections.Generic.IEnumerable{``0})" />
+      <Member Id="M:System.Data.Linq.Table`1.DeleteOnSubmit(`0)" />
+      <Member Id="M:System.Data.Linq.Table`1.GetEnumerator" />
+      <Member Id="M:System.Data.Linq.Table`1.GetModifiedMembers(`0)" />
+      <Member Id="M:System.Data.Linq.Table`1.GetNewBindingList" />
+      <Member Id="M:System.Data.Linq.Table`1.GetOriginalEntityState(`0)" />
+      <Member Id="M:System.Data.Linq.Table`1.InsertAllOnSubmit``1(System.Collections.Generic.IEnumerable{``0})" />
+      <Member Id="M:System.Data.Linq.Table`1.InsertOnSubmit(`0)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Collections#Generic#IEnumerable&lt;TEntity&gt;#GetEnumerator" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Collections#IEnumerable#GetEnumerator" />
+      <Member Id="M:System.Data.Linq.Table`1.System#ComponentModel#IListSource#GetList" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#Attach(System.Object)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#Attach(System.Object,System.Boolean)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#Attach(System.Object,System.Object)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#AttachAll(System.Collections.IEnumerable)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#AttachAll(System.Collections.IEnumerable,System.Boolean)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#DeleteAllOnSubmit(System.Collections.IEnumerable)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#DeleteOnSubmit(System.Object)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#GetModifiedMembers(System.Object)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#GetOriginalEntityState(System.Object)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#InsertAllOnSubmit(System.Collections.IEnumerable)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#InsertOnSubmit(System.Object)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Linq#IQueryProvider#CreateQuery(System.Linq.Expressions.Expression)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Linq#IQueryProvider#CreateQuery``1(System.Linq.Expressions.Expression)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Linq#IQueryProvider#Execute(System.Linq.Expressions.Expression)" />
+      <Member Id="M:System.Data.Linq.Table`1.System#Linq#IQueryProvider#Execute``1(System.Linq.Expressions.Expression)" />
+      <Member Id="M:System.Data.Linq.Table`1.ToString" />
+      <Member Id="P:System.Data.Linq.Table`1.Context" />
+      <Member Id="P:System.Data.Linq.Table`1.IsReadOnly" />
+      <Member Id="P:System.Data.Linq.Table`1.System#ComponentModel#IListSource#ContainsListCollection" />
+      <Member Id="P:System.Data.Linq.Table`1.System#Linq#IQueryable#ElementType" />
+      <Member Id="P:System.Data.Linq.Table`1.System#Linq#IQueryable#Expression" />
+      <Member Id="P:System.Data.Linq.Table`1.System#Linq#IQueryable#Provider" />
+    </Type>
+  </Namespace>
+  <Namespace Name="System.Data.Linq.Mapping">
+    <Type Name="System.Data.Linq.Mapping.AssociationAttribute" Id="T:System.Data.Linq.Mapping.AssociationAttribute">
+      <Member Id="M:System.Data.Linq.Mapping.AssociationAttribute.#ctor" />
+      <Member Id="P:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull" />
+      <Member Id="P:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule" />
+      <Member Id="P:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey" />
+      <Member Id="P:System.Data.Linq.Mapping.AssociationAttribute.IsUnique" />
+      <Member Id="P:System.Data.Linq.Mapping.AssociationAttribute.OtherKey" />
+      <Member Id="P:System.Data.Linq.Mapping.AssociationAttribute.ThisKey" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.AttributeMappingSource" Id="T:System.Data.Linq.Mapping.AttributeMappingSource">
+      <Member Id="M:System.Data.Linq.Mapping.AttributeMappingSource.#ctor" />
+      <Member Id="M:System.Data.Linq.Mapping.AttributeMappingSource.CreateModel(System.Type)" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.AutoSync" Id="T:System.Data.Linq.Mapping.AutoSync">
+      <Member Id="F:System.Data.Linq.Mapping.AutoSync.Always" />
+      <Member Id="F:System.Data.Linq.Mapping.AutoSync.Default" />
+      <Member Id="F:System.Data.Linq.Mapping.AutoSync.Never" />
+      <Member Id="F:System.Data.Linq.Mapping.AutoSync.OnInsert" />
+      <Member Id="F:System.Data.Linq.Mapping.AutoSync.OnUpdate" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.ColumnAttribute" Id="T:System.Data.Linq.Mapping.ColumnAttribute">
+      <Member Id="M:System.Data.Linq.Mapping.ColumnAttribute.#ctor" />
+      <Member Id="P:System.Data.Linq.Mapping.ColumnAttribute.AutoSync" />
+      <Member Id="P:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull" />
+      <Member Id="P:System.Data.Linq.Mapping.ColumnAttribute.DbType" />
+      <Member Id="P:System.Data.Linq.Mapping.ColumnAttribute.Expression" />
+      <Member Id="P:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated" />
+      <Member Id="P:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator" />
+      <Member Id="P:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey" />
+      <Member Id="P:System.Data.Linq.Mapping.ColumnAttribute.IsVersion" />
+      <Member Id="P:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.DataAttribute" Id="T:System.Data.Linq.Mapping.DataAttribute">
+      <Member Id="M:System.Data.Linq.Mapping.DataAttribute.#ctor" />
+      <Member Id="P:System.Data.Linq.Mapping.DataAttribute.Name" />
+      <Member Id="P:System.Data.Linq.Mapping.DataAttribute.Storage" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.DatabaseAttribute" Id="T:System.Data.Linq.Mapping.DatabaseAttribute">
+      <Member Id="M:System.Data.Linq.Mapping.DatabaseAttribute.#ctor" />
+      <Member Id="P:System.Data.Linq.Mapping.DatabaseAttribute.Name" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.FunctionAttribute" Id="T:System.Data.Linq.Mapping.FunctionAttribute">
+      <Member Id="M:System.Data.Linq.Mapping.FunctionAttribute.#ctor" />
+      <Member Id="P:System.Data.Linq.Mapping.FunctionAttribute.IsComposable" />
+      <Member Id="P:System.Data.Linq.Mapping.FunctionAttribute.Name" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.InheritanceMappingAttribute" Id="T:System.Data.Linq.Mapping.InheritanceMappingAttribute">
+      <Member Id="M:System.Data.Linq.Mapping.InheritanceMappingAttribute.#ctor" />
+      <Member Id="P:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code" />
+      <Member Id="P:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault" />
+      <Member Id="P:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.MappingSource" Id="T:System.Data.Linq.Mapping.MappingSource">
+      <Member Id="M:System.Data.Linq.Mapping.MappingSource.#ctor" />
+      <Member Id="M:System.Data.Linq.Mapping.MappingSource.CreateModel(System.Type)" />
+      <Member Id="M:System.Data.Linq.Mapping.MappingSource.GetModel(System.Type)" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.MetaAccessor" Id="T:System.Data.Linq.Mapping.MetaAccessor">
+      <Member Id="M:System.Data.Linq.Mapping.MetaAccessor.#ctor" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaAccessor.GetBoxedValue(System.Object)" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaAccessor.HasAssignedValue(System.Object)" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaAccessor.HasLoadedValue(System.Object)" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaAccessor.HasValue(System.Object)" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaAccessor.SetBoxedValue(System.Object@,System.Object)" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAccessor.Type" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.MetaAccessor`2" Id="T:System.Data.Linq.Mapping.MetaAccessor`2">
+      <Member Id="M:System.Data.Linq.Mapping.MetaAccessor`2.#ctor" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaAccessor`2.GetBoxedValue(System.Object)" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaAccessor`2.GetValue(`0)" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaAccessor`2.SetBoxedValue(System.Object@,System.Object)" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaAccessor`2.SetValue(`0@,`1)" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAccessor`2.Type" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.MetaAssociation" Id="T:System.Data.Linq.Mapping.MetaAssociation">
+      <Member Id="M:System.Data.Linq.Mapping.MetaAssociation.#ctor" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAssociation.DeleteOnNull" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAssociation.DeleteRule" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAssociation.IsForeignKey" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAssociation.IsMany" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAssociation.IsNullable" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAssociation.IsUnique" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAssociation.OtherKey" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAssociation.OtherKeyIsPrimaryKey" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAssociation.OtherMember" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAssociation.OtherType" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAssociation.ThisKey" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAssociation.ThisKeyIsPrimaryKey" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaAssociation.ThisMember" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.MetaDataMember" Id="T:System.Data.Linq.Mapping.MetaDataMember">
+      <Member Id="M:System.Data.Linq.Mapping.MetaDataMember.#ctor" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaDataMember.IsDeclaredBy(System.Data.Linq.Mapping.MetaType)" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.Association" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.AutoSync" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.CanBeNull" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.DbType" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.DeclaringType" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.DeferredSourceAccessor" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.DeferredValueAccessor" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.Expression" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.IsAssociation" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.IsDbGenerated" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.IsDeferred" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.IsDiscriminator" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.IsPersistent" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.IsPrimaryKey" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.IsVersion" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.LoadMethod" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.MappedName" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.Member" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.MemberAccessor" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.Name" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.Ordinal" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.StorageAccessor" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.StorageMember" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.Type" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaDataMember.UpdateCheck" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.MetaFunction" Id="T:System.Data.Linq.Mapping.MetaFunction">
+      <Member Id="M:System.Data.Linq.Mapping.MetaFunction.#ctor" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaFunction.HasMultipleResults" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaFunction.IsComposable" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaFunction.MappedName" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaFunction.Method" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaFunction.Model" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaFunction.Name" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaFunction.Parameters" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaFunction.ResultRowTypes" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaFunction.ReturnParameter" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.MetaModel" Id="T:System.Data.Linq.Mapping.MetaModel">
+      <Member Id="M:System.Data.Linq.Mapping.MetaModel.#ctor" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaModel.GetFunction(System.Reflection.MethodInfo)" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaModel.GetFunctions" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaModel.GetMetaType(System.Type)" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaModel.GetTable(System.Type)" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaModel.GetTables" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaModel.ContextType" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaModel.DatabaseName" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaModel.MappingSource" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaModel.ProviderType" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.MetaParameter" Id="T:System.Data.Linq.Mapping.MetaParameter">
+      <Member Id="M:System.Data.Linq.Mapping.MetaParameter.#ctor" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaParameter.DbType" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaParameter.MappedName" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaParameter.Name" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaParameter.Parameter" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaParameter.ParameterType" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.MetaTable" Id="T:System.Data.Linq.Mapping.MetaTable">
+      <Member Id="M:System.Data.Linq.Mapping.MetaTable.#ctor" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaTable.DeleteMethod" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaTable.InsertMethod" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaTable.Model" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaTable.RowType" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaTable.TableName" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaTable.UpdateMethod" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.MetaType" Id="T:System.Data.Linq.Mapping.MetaType">
+      <Member Id="M:System.Data.Linq.Mapping.MetaType.#ctor" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaType.GetDataMember(System.Reflection.MemberInfo)" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaType.GetInheritanceType(System.Type)" />
+      <Member Id="M:System.Data.Linq.Mapping.MetaType.GetTypeForInheritanceCode(System.Object)" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.Associations" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.CanInstantiate" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.DataMembers" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.DBGeneratedIdentityMember" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.DerivedTypes" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.Discriminator" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.HasAnyLoadMethod" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.HasAnyValidateMethod" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.HasInheritance" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.HasInheritanceCode" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.HasUpdateCheck" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.IdentityMembers" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.InheritanceBase" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.InheritanceCode" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.InheritanceDefault" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.InheritanceRoot" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.InheritanceTypes" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.IsEntity" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.IsInheritanceDefault" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.Model" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.Name" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.OnLoadedMethod" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.OnValidateMethod" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.PersistentDataMembers" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.Table" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.Type" />
+      <Member Id="P:System.Data.Linq.Mapping.MetaType.VersionMember" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.ParameterAttribute" Id="T:System.Data.Linq.Mapping.ParameterAttribute">
+      <Member Id="M:System.Data.Linq.Mapping.ParameterAttribute.#ctor" />
+      <Member Id="P:System.Data.Linq.Mapping.ParameterAttribute.DbType" />
+      <Member Id="P:System.Data.Linq.Mapping.ParameterAttribute.Name" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.ProviderAttribute" Id="T:System.Data.Linq.Mapping.ProviderAttribute">
+      <Member Id="M:System.Data.Linq.Mapping.ProviderAttribute.#ctor" />
+      <Member Id="M:System.Data.Linq.Mapping.ProviderAttribute.#ctor(System.Type)" />
+      <Member Id="P:System.Data.Linq.Mapping.ProviderAttribute.Type" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.ResultTypeAttribute" Id="T:System.Data.Linq.Mapping.ResultTypeAttribute">
+      <Member Id="M:System.Data.Linq.Mapping.ResultTypeAttribute.#ctor(System.Type)" />
+      <Member Id="P:System.Data.Linq.Mapping.ResultTypeAttribute.Type" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.TableAttribute" Id="T:System.Data.Linq.Mapping.TableAttribute">
+      <Member Id="M:System.Data.Linq.Mapping.TableAttribute.#ctor" />
+      <Member Id="P:System.Data.Linq.Mapping.TableAttribute.Name" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.UpdateCheck" Id="T:System.Data.Linq.Mapping.UpdateCheck">
+      <Member Id="F:System.Data.Linq.Mapping.UpdateCheck.Always" />
+      <Member Id="F:System.Data.Linq.Mapping.UpdateCheck.Never" />
+      <Member Id="F:System.Data.Linq.Mapping.UpdateCheck.WhenChanged" />
+    </Type>
+    <Type Name="System.Data.Linq.Mapping.XmlMappingSource" Id="T:System.Data.Linq.Mapping.XmlMappingSource">
+      <Member Id="M:System.Data.Linq.Mapping.XmlMappingSource.CreateModel(System.Type)" />
+      <Member Id="M:System.Data.Linq.Mapping.XmlMappingSource.FromReader(System.Xml.XmlReader)" />
+      <Member Id="M:System.Data.Linq.Mapping.XmlMappingSource.FromStream(System.IO.Stream)" />
+      <Member Id="M:System.Data.Linq.Mapping.XmlMappingSource.FromUrl(System.String)" />
+      <Member Id="M:System.Data.Linq.Mapping.XmlMappingSource.FromXml(System.String)" />
+    </Type>
+  </Namespace>
+  <Namespace Name="System.Data.Linq.SqlClient.Implementation">
+    <Type Name="System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1" Id="T:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1">
+      <Member Id="F:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.Arguments" />
+      <Member Id="F:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.BufferReader" />
+      <Member Id="F:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.DataReader" />
+      <Member Id="F:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.Globals" />
+      <Member Id="F:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.Locals" />
+      <Member Id="F:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.Ordinals" />
+      <Member Id="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.#ctor" />
+      <Member Id="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.Convert``1(System.Collections.IEnumerable)" />
+      <Member Id="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.CreateGroup``2(``0,System.Collections.Generic.IEnumerable{``1})" />
+      <Member Id="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.CreateOrderedEnumerable``1(System.Collections.Generic.IEnumerable{``0})" />
+      <Member Id="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.ErrorAssignmentToNull(System.Type)" />
+      <Member Id="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.ExecuteSubQuery(System.Int32,System.Object[])" />
+      <Member Id="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.GetLinkSource``1(System.Int32,System.Int32,System.Object[])" />
+      <Member Id="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.GetNestedLinkSource``1(System.Int32,System.Int32,System.Object)" />
+      <Member Id="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.InsertLookup(System.Int32,System.Object)" />
+      <Member Id="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.Read" />
+      <Member Id="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.SendEntityMaterialized(System.Int32,System.Object)" />
+      <Member Id="P:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.CanDeferLoad" />
+    </Type>
+  </Namespace>
+  <Namespace Name="System.Data.Linq.SqlClient">
+    <Type Name="System.Data.Linq.SqlClient.Sql2000Provider" Id="T:System.Data.Linq.SqlClient.Sql2000Provider">
+      <Member Id="M:System.Data.Linq.SqlClient.Sql2000Provider.#ctor" />
+    </Type>
+    <Type Name="System.Data.Linq.SqlClient.Sql2005Provider" Id="T:System.Data.Linq.SqlClient.Sql2005Provider">
+      <Member Id="M:System.Data.Linq.SqlClient.Sql2005Provider.#ctor" />
+    </Type>
+    <Type Name="System.Data.Linq.SqlClient.Sql2008Provider" Id="T:System.Data.Linq.SqlClient.Sql2008Provider">
+      <Member Id="M:System.Data.Linq.SqlClient.Sql2008Provider.#ctor" />
+    </Type>
+    <Type Name="System.Data.Linq.SqlClient.SqlHelpers" Id="T:System.Data.Linq.SqlClient.SqlHelpers">
+      <Member Id="M:System.Data.Linq.SqlClient.SqlHelpers.GetStringContainsPattern(System.String,System.Char)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlHelpers.GetStringEndsWithPattern(System.String,System.Char)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlHelpers.GetStringStartsWithPattern(System.String,System.Char)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlHelpers.TranslateVBLikePattern(System.String,System.Char)" />
+    </Type>
+    <Type Name="System.Data.Linq.SqlClient.SqlMethods" Id="T:System.Data.Linq.SqlClient.SqlMethods">
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffDay(System.DateTime,System.DateTime)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffDay(System.DateTimeOffset,System.DateTimeOffset)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffDay(System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffDay(System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour(System.DateTime,System.DateTime)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour(System.DateTimeOffset,System.DateTimeOffset)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour(System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour(System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond(System.DateTime,System.DateTime)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond(System.DateTimeOffset,System.DateTimeOffset)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond(System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond(System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMillisecond(System.DateTime,System.DateTime)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMillisecond(System.DateTimeOffset,System.DateTimeOffset)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMillisecond(System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMillisecond(System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute(System.DateTime,System.DateTime)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute(System.DateTimeOffset,System.DateTimeOffset)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute(System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute(System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth(System.DateTime,System.DateTime)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth(System.DateTimeOffset,System.DateTimeOffset)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth(System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth(System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffNanosecond(System.DateTime,System.DateTime)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffNanosecond(System.DateTimeOffset,System.DateTimeOffset)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffNanosecond(System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffNanosecond(System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond(System.DateTime,System.DateTime)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond(System.DateTimeOffset,System.DateTimeOffset)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond(System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond(System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear(System.DateTime,System.DateTime)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear(System.DateTimeOffset,System.DateTimeOffset)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear(System.Nullable{System.DateTime},System.Nullable{System.DateTime})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear(System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.Like(System.String,System.String)" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlMethods.Like(System.String,System.String,System.Char)" />
+    </Type>
+    <Type Name="System.Data.Linq.SqlClient.SqlProvider" Id="T:System.Data.Linq.SqlClient.SqlProvider">
+      <Member Id="M:System.Data.Linq.SqlClient.SqlProvider.#ctor" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlProvider.Dispose" />
+      <Member Id="M:System.Data.Linq.SqlClient.SqlProvider.Dispose(System.Boolean)" />
+    </Type>
+  </Namespace>
+</Framework>
